@@ -1,0 +1,40 @@
+e-commerce/
+├── config/
+│   └── db.js
+├── controllers/
+│   ├── authController.js
+│   ├── productController.js
+│   ├── orderController.js
+│   └── cartController.js
+├── middleware/
+│   ├── auth.js
+│   └── errorHandler.js
+├── models/
+│   ├── User.js
+│   ├── Product.js
+│   ├── Order.js
+│   └── Cart.js
+├── public/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── routes/
+│   ├── authRoutes.js
+│   ├── productRoutes.js
+│   ├── orderRoutes.js
+│   └── cartRoutes.js
+├── views/
+│   ├── layouts/
+│   │   └── main.hbs
+│   ├── partials/
+│   │   ├── header.hbs
+│   │   ├── footer.hbs
+│   │   └── navbar.hbs
+│   ├── products/
+│   ├── cart/
+│   ├── checkout/
+│   └── user/
+├── .env
+├── .gitignore
+├── app.js
+└── package.json 

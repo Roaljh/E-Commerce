@@ -1,0 +1,81 @@
+<div class="container mt-4">
+    {{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+    {{#if success}}
+    <div class="alert alert-success">{{success}}</div>
+    {{/if}}
+
+    <div class="jumbotron text-center py-5 bg-light rounded">
+        <h1 class="display-4">Welcome to E-Commerce</h1>
+        <p class="lead">Discover amazing products at great prices!</p>
+        <hr class="my-4">
+        <p>Browse our collection of products or create an account to start shopping.</p>
+        {{#unless user}}
+            <a class="btn btn-primary btn-lg" href="/auth/register" role="button">Get Started</a>
+        {{else}}
+            <a class="btn btn-primary btn-lg" href="/products" role="button">Browse Products</a>
+        {{/unless}}
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-shopping-bag fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">Wide Selection</h5>
+                    <p class="card-text">Browse through thousands of products from various categories.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-shield-alt fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">Secure Shopping</h5>
+                    <p class="card-text">Shop with confidence with our secure payment system.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-truck fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">Fast Delivery</h5>
+                    <p class="card-text">Get your products delivered quickly to your doorstep.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{#if products.length}}
+    <div class="mt-5">
+        <h2 class="text-center mb-4">Recent Products</h2>
+        <div class="row">
+            {{#each products}}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="{{this.image}}" class="card-img-top" alt="{{this.name}}" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text text-truncate">{{this.description}}</p>
+                        <p class="card-text">
+                            <strong>${{this.price}}</strong>
+                            {{#if this.stock}}
+                                <span class="badge bg-success ms-2">In Stock</span>
+                            {{else}}
+                                <span class="badge bg-danger ms-2">Out of Stock</span>
+                            {{/if}}
+                        </p>
+                        <a href="/products/{{this._id}}" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="text-center mt-4">
+            <a href="/products" class="btn btn-outline-primary btn-lg">View All Products</a>
+        </div>
+    </div>
+    {{/if}}
+</div>

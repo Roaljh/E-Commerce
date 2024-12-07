@@ -1,0 +1,93 @@
+{{!< main}}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Profile Information</h5>
+                    {{#if error}}
+                        <div class="alert alert-danger">{{error}}</div>
+                    {{/if}}
+                    {{#if success}}
+                        <div class="alert alert-success">{{success}}</div>
+                    {{/if}}
+                    <form action="/profile/update" method="POST">
+                        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                        
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{user.name}}" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" value="{{user.email}}" required>
+                        </div>
+                        
+                        <hr>
+                        <h6>Change Password</h6>
+                        
+                        <div class="mb-3">
+                            <label for="currentPassword" class="form-label">Current Password</label>
+                            <input type="password" class="form-control" id="currentPassword" name="currentPassword">
+                            <small class="text-muted">Required only if changing password</small>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">New Password</label>
+                            <input type="password" class="form-control" id="newPassword" name="newPassword">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Recent Orders</h5>
+                    {{#if recentOrders.length}}
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Date</th>
+                                        <th>Total</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each recentOrders}}
+                                        <tr>
+                                            <td>{{this.invoiceNumber}}</td>
+                                            <td>{{formatDate this.orderDate}}</td>
+                                            <td>{{formatCurrency this.total}}</td>
+                                            <td>
+                                                <span class="badge bg-{{getStatusColor this.status}}">
+                                                    {{capitalize this.status}}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a href="/orders/{{this._id}}" class="btn btn-sm btn-info">View</a>
+                                            </td>
+                                        </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-end">
+                            <a href="/orders" class="btn btn-outline-primary">View All Orders</a>
+                        </div>
+                    {{else}}
+                        <p class="text-muted">No orders found</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,159 @@
+<div class="container mt-5">
+    <h1>Checkout</h1>
+
+    {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+
+    <div class="row">
+        <!-- Order Summary -->
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Your Cart</span>
+                <span class="badge bg-secondary rounded-pill">{{cart.items.length}}</span>
+            </h4>
+            <ul class="list-group mb-3">
+                {{#each cart.items}}
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                            <h6 class="my-0">{{this.product.name}}</h6>
+                            <small class="text-muted">Quantity: {{this.quantity}}</small>
+                        </div>
+                        <span class="text-muted">₹{{multiply this.quantity this.product.price}}</span>
+                    </li>
+                {{/each}}
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>Total</span>
+                    <strong>₹{{cart.total}}</strong>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Checkout Form -->
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Shipping Address</h4>
+            <form id="checkoutForm" action="/checkout/place-order" method="POST">
+                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                <input type="hidden" name="razorpayPaymentId" id="razorpayPaymentId">
+                <input type="hidden" name="razorpayOrderId" id="razorpayOrderId" value="{{razorpayOrder.id}}">
+                <input type="hidden" name="razorpaySignature" id="razorpaySignature">
+                <input type="hidden" name="paymentMethod" id="paymentMethod" value="cod">
+
+                <div class="mb-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{user.name}}" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{user.email}}" readonly>
+                </div>
+
+                <div class="mb-3">
+                    <label for="shippingAddress">Address *</label>
+                    <input type="text" class="form-control" id="shippingAddress" name="shippingAddress" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="city">City *</label>
+                        <input type="text" class="form-control" id="city" name="city" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="state">State *</label>
+                        <input type="text" class="form-control" id="state" name="state" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="zipCode">PIN Code *</label>
+                        <input type="text" class="form-control" id="zipCode" name="zipCode" required pattern="[0-9]{6}" title="Please enter a valid 6-digit PIN code">
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+
+                <h4 class="mb-3">Payment Method</h4>
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio mb-2">
+                        <input id="cod" name="paymentMethodRadio" type="radio" class="custom-control-input" value="cod" checked>
+                        <label class="custom-control-label" for="cod">Cash on Delivery</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="online" name="paymentMethodRadio" type="radio" class="custom-control-input" value="online">
+                        <label class="custom-control-label" for="online">Online Payment (Razorpay)</label>
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+
+                <button id="submitBtn" class="btn btn-primary btn-lg btn-block w-100" type="submit">
+                    Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('checkoutForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const paymentMethodInput = document.getElementById('paymentMethod');
+
+        // Razorpay configuration
+        const options = {
+            key: '{{razorpayKeyId}}',
+            amount: {{multiply cart.total 100}}, // Amount in paise
+            currency: 'INR',
+            name: 'E-Commerce Store',
+            description: 'Order Payment',
+            order_id: '{{razorpayOrder.id}}',
+            handler: function (response) {
+                console.log('Razorpay Response:', response);
+                
+                // Ensure all hidden inputs are populated
+                document.getElementById('razorpayPaymentId').value = response.razorpay_payment_id;
+                document.getElementById('razorpayOrderId').value = response.razorpay_order_id;
+                document.getElementById('razorpaySignature').value = response.razorpay_signature;
+                
+                // Set payment method to online
+                paymentMethodInput.value = 'online';
+                
+                // Submit the form
+                form.submit();
+            },
+            prefill: {
+                name: '{{user.name}}',
+                email: '{{user.email}}'
+            },
+            theme: {
+                color: '#007bff'
+            }
+        };
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!form.checkValidity()) {
+                return form.reportValidity();
+            }
+
+            // Update payment method based on radio selection
+            const selectedPaymentMethod = document.querySelector('input[name="paymentMethodRadio"]:checked').value;
+            paymentMethodInput.value = selectedPaymentMethod;
+
+            if (selectedPaymentMethod === 'online') {
+                // Initialize Razorpay
+                try {
+                    const razorpay = new Razorpay(options);
+                    razorpay.open();
+                } catch (error) {
+                    console.error('Razorpay initialization error:', error);
+                    alert('Unable to initialize payment gateway. Please try again.');
+                }
+            } else {
+                // Cash on Delivery
+                form.submit();
+            }
+        });
+    });
+</script>

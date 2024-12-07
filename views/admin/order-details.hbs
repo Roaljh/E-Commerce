@@ -1,0 +1,478 @@
+{{!< main}}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Order #{{order._id}}</h1>
+        <div>
+            <a href="/admin/orders/{{order._id}}/invoice" class="btn btn-secondary">Download Invoice</a>
+            <a href="/admin/orders" class="btn btn-outline-primary">Back to Orders</a>
+        </div>
+    </div>
+
+    {{#if message}}
+        <div class="alert alert-{{message.type}}">
+            {{message.text}}
+        </div>
+    {{/if}}
+
+    <div class="row">
+        <!-- Order Status Pipeline -->
+        <div class="col-12 mb-4">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Order Status Pipeline</h5>
+                </div>
+                <div class="card-body">
+                    <div class="order-pipeline d-flex justify-content-between align-items-center">
+                        <div class="pipeline-step {{#if (eq order.status 'pending')}}active{{/if}} {{#if (or (eq order.status 'processing') (eq order.status 'shipped') (eq order.status 'delivered'))}}completed{{/if}}">
+                            <div class="step-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="step-label">Pending</div>
+                            {{#if (eq order.status 'pending')}}
+                                <button class="btn btn-sm btn-success mt-2" onclick="updateOrderStatus('{{order._id}}', 'processing')">
+                                    Process Order
+                                </button>
+                            {{/if}}
+                        </div>
+                        <div class="pipeline-connector"></div>
+                        <div class="pipeline-step {{#if (eq order.status 'processing')}}active{{/if}} {{#if (or (eq order.status 'shipped') (eq order.status 'delivered'))}}completed{{/if}}">
+                            <div class="step-icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="step-label">Processing</div>
+                            {{#if (eq order.status 'processing')}}
+                                <button class="btn btn-sm btn-success mt-2" onclick="updateOrderStatus('{{order._id}}', 'shipped')">
+                                    Mark as Shipped
+                                </button>
+                            {{/if}}
+                        </div>
+                        <div class="pipeline-connector"></div>
+                        <div class="pipeline-step {{#if (eq order.status 'shipped')}}active{{/if}} {{#if (eq order.status 'delivered')}}completed{{/if}}">
+                            <div class="step-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="step-label">Shipped</div>
+                            {{#if (eq order.status 'shipped')}}
+                                <button class="btn btn-sm btn-success mt-2" onclick="updateOrderStatus('{{order._id}}', 'delivered')">
+                                    Mark as Delivered
+                                </button>
+                            {{/if}}
+                        </div>
+                        <div class="pipeline-connector"></div>
+                        <div class="pipeline-step {{#if (eq order.status 'delivered')}}active{{/if}}">
+                            <div class="step-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="step-label">Delivered</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Details -->
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Order Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <h6>Order Date</h6>
+                            <p>{{formatDate order.createdAt}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Current Status</h6>
+                            <span class="badge badge-{{getStatusColor order.status}}">
+                                {{capitalize order.status}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Payment Method</h6>
+                            <p>{{capitalize order.paymentMethod}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Payment Status</h6>
+                            <div class="d-flex align-items-center">
+                                <span class="badge badge-{{#if (eq order.paymentStatus 'paid')}}success{{else}}warning{{/if}} mr-2">
+                                    {{capitalize order.paymentStatus}}
+                                </span>
+                                {{#if (eq order.paymentStatus 'pending')}}
+                                    <button class="btn btn-sm btn-success ml-2" onclick="updatePaymentStatus('{{order._id}}', 'paid')">
+                                        Mark as Paid
+                                    </button>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping Information -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Shipping Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Shipping Address</h6>
+                            <p>
+                                {{order.shippingAddress.street}}<br>
+                                {{order.shippingAddress.city}}, {{order.shippingAddress.state}}<br>
+                                {{order.shippingAddress.zipCode}}<br>
+                                {{order.shippingAddress.country}}
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Tracking Number</h6>
+                            {{#if order.trackingNumber}}
+                                <p>{{order.trackingNumber}}</p>
+                            {{else}}
+                                {{#if (eq order.status 'processing')}}
+                                    <button class="btn btn-sm btn-primary" onclick="openTrackingModal('{{order._id}}')">
+                                        Add Tracking Number
+                                    </button>
+                                {{else}}
+                                    <p class="text-muted">Not available</p>
+                                {{/if}}
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Items -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Order Items</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each order.items}}
+                                <tr>
+                                    <td>{{this.product.name}}</td>
+                                    <td>{{this.quantity}}</td>
+                                    <td>₹{{this.price}}</td>
+                                    <td>₹{{multiply this.quantity this.price}}</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3" class="text-right"><strong>Subtotal:</strong></td>
+                                    <td>₹{{calculateSubtotal order.items}}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-right"><strong>Shipping:</strong></td>
+                                    <td>₹{{default order.shippingCost 0}}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-right"><strong>Total:</strong></td>
+                                    <td><strong>₹{{calculateTotal order.items order.shippingCost}}</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Information -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Customer Information</h5>
+                </div>
+                <div class="card-body">
+                    <h6>Name</h6>
+                    <p>{{order.user.firstName}} {{order.user.lastName}}</p>
+                    <h6>Email</h6>
+                    <p>{{order.user.email}}</p>
+                    <h6>Phone</h6>
+                    <p>{{order.user.phone}}</p>
+                </div>
+            </div>
+
+            <!-- Order Timeline -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Order Timeline</h5>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>Order Placed</h6>
+                                <p class="text-muted">{{formatDate order.createdAt}}</p>
+                            </div>
+                        </div>
+                        {{#if order.processedAt}}
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>Order Processed</h6>
+                                <p class="text-muted">{{formatDate order.processedAt}}</p>
+                            </div>
+                        </div>
+                        {{/if}}
+                        {{#if order.shippedAt}}
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>Order Shipped</h6>
+                                <p class="text-muted">{{formatDate order.shippedAt}}</p>
+                            </div>
+                        </div>
+                        {{/if}}
+                        {{#if order.deliveredAt}}
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h6>Order Delivered</h6>
+                                <p class="text-muted">{{formatDate order.deliveredAt}}</p>
+                            </div>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tracking Number Modal -->
+<div class="modal fade" id="trackingNumberModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Tracking Number</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Tracking Number</label>
+                    <input type="text" class="form-control" id="trackingNumberInput">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveTrackingNumber()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.order-pipeline {
+    padding: 20px;
+    position: relative;
+}
+
+.pipeline-step {
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+
+.pipeline-connector {
+    flex: 1;
+    height: 2px;
+    background-color: #dee2e6;
+    margin-top: 25px;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #6c757d;
+}
+
+.pipeline-step.active .step-icon {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.pipeline-step.completed .step-icon {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.step-label {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #007bff;
+    border: 2px solid #fff;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    bottom: -20px;
+    width: 2px;
+    background-color: #dee2e6;
+}
+
+.timeline-item:last-child:before {
+    display: none;
+}
+</style>
+
+<script>
+let currentOrderId = null;
+
+function updateOrderStatus(orderId, status) {
+    if (!confirm(`Are you sure you want to update the order status to ${status}?`)) {
+        return;
+    }
+
+    fetch(`/admin/orders/${orderId}/status`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
+        },
+        body: JSON.stringify({ status: status })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            location.reload();
+        } else {
+            alert(data.message || 'Failed to update order status');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while updating order status');
+    });
+}
+
+function updatePaymentStatus(orderId, status) {
+    if (!confirm(`Are you sure you want to mark this order as ${status}?`)) {
+        return;
+    }
+
+    fetch(`/admin/orders/${orderId}/payment-status`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
+        },
+        body: JSON.stringify({ paymentStatus: status })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            location.reload();
+        } else {
+            alert(data.message || 'Failed to update payment status');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while updating payment status');
+    });
+}
+
+function openTrackingModal(orderId) {
+    currentOrderId = orderId;
+    $('#trackingNumberModal').modal('show');
+}
+
+function saveTrackingNumber() {
+    const trackingNumber = document.getElementById('trackingNumberInput').value.trim();
+    
+    if (!trackingNumber) {
+        alert('Please enter a tracking number');
+        return;
+    }
+
+    fetch('/admin/orders/add-tracking', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
+        },
+        body: JSON.stringify({
+            orderId: currentOrderId,
+            trackingNumber: trackingNumber
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            $('#trackingNumberModal').modal('hide');
+            location.reload();
+        } else {
+            alert(data.message || 'Failed to add tracking number');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while adding tracking number');
+    });
+}
+
+function calculateSubtotal(items) {
+    let subtotal = 0;
+    items.forEach(item => {
+        subtotal += item.quantity * item.price;
+    });
+    return subtotal;
+}
+
+function calculateTotal(items, shippingCost) {
+    let subtotal = calculateSubtotal(items);
+    return subtotal + shippingCost;
+}
+</script>

@@ -1,0 +1,94 @@
+{{!< main}}
+
+<div class="container mt-4">
+    <h1>My Orders</h1>
+
+    {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+
+    {{#if success}}
+        <div class="alert alert-success">{{success}}</div>
+    {{/if}}
+
+    <div class="row">
+        {{#each orders}}
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="mb-0">Order #{{this.invoiceNumber}}</h5>
+                            <small class="text-muted">{{formatDate this.orderDate}}</small>
+                        </div>
+                        <span class="badge bg-{{getStatusColor this.status}}">
+                            {{capitalize this.status}}
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="order-items">
+                                    {{#each this.items}}
+                                        <div class="d-flex align-items-center mb-2">
+                                            {{#if this.product.image}}
+                                                <img src="{{this.product.image}}" alt="{{this.product.name}}" class="me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                            {{/if}}
+                                            <div>
+                                                <h6 class="mb-0">{{this.product.name}}</h6>
+                                                <small class="text-muted">
+                                                    Quantity: {{this.quantity}} × ${{this.price}}
+                                                </small>
+                                            </div>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <p class="mb-2"><strong>Total:</strong> ${{this.total}}</p>
+                                <div class="btn-group">
+                                    <a href="/orders/{{this._id}}" class="btn btn-primary btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{#if this.trackingNumber}}
+                        <div class="card-footer">
+                            <small class="text-muted">Tracking Number: {{this.trackingNumber}}</small>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        {{else}}
+            <div class="col-12">
+                <div class="alert alert-info">
+                    You haven't placed any orders yet. 
+                    <a href="/products" class="alert-link">Start shopping</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+    {{#if pages}}
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center">
+                {{#if (gt currentPage 1)}}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{subtract currentPage 1}}">Previous</a>
+                    </li>
+                {{/if}}
+                
+                {{#times pages}}
+                    <li class="page-item {{#eq this ../currentPage}}active{{/eq}}">
+                        <a class="page-link" href="?page={{this}}">{{this}}</a>
+                    </li>
+                {{/times}}
+                
+                {{#if (lt currentPage pages)}}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{add currentPage 1}}">Next</a>
+                    </li>
+                {{/if}}
+            </ul>
+        </nav>
+    {{/if}}
+</div>

@@ -1,0 +1,611 @@
+error: ForbiddenError: invalid csrf token
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:112:19)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at Immediate._onImmediate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-session\index.js:514:7)
+    at process.processImmediate (node:internal/timers:485:21)
+error: ForbiddenError: invalid csrf token
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:112:19)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at session (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-session\index.js:487:7)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+error: ForbiddenError: invalid csrf token
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:112:19)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at Immediate._onImmediate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-session\index.js:514:7)
+    at process.processImmediate (node:internal/timers:485:21)
+error: ForbiddenError: invalid csrf token
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:112:19)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at Immediate._onImmediate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-session\index.js:514:7)
+    at process.processImmediate (node:internal/timers:485:21)
+error: ForbiddenError: invalid csrf token
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:112:19)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at serveStatic (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:75:16)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+error: ForbiddenError: invalid csrf token
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:112:19)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at serveStatic (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:75:16)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+error: TypeError: req.csrfToken is not a function
+    at exports.getAddProductForm (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\controllers\productController.js:36:24)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAdmin (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAdmin.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAuth (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAuth.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:119:3)
+error: TypeError: req.csrfToken is not a function
+    at exports.getAddProductForm (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\controllers\productController.js:36:24)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAdmin (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAdmin.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAuth (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAuth.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:119:3)
+error: TypeError: req.csrfToken is not a function
+    at exports.getAddProductForm (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\controllers\productController.js:36:24)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAdmin (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAdmin.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAuth (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAuth.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:119:3)
+error: TypeError: req.csrfToken is not a function
+    at exports.getAddProductForm (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\controllers\productController.js:28:24)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAdmin (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAdmin.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAuth (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAuth.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:119:3)
+error: TypeError: req.csrfToken is not a function
+    at exports.getAddProductForm (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\controllers\productController.js:28:24)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAdmin (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAdmin.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAuth (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAuth.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:119:3)
+error: TypeError: req.csrfToken is not a function
+    at exports.getAddProductForm (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\controllers\productController.js:28:24)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAdmin (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAdmin.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at isAuth (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\middleware\isAuth.js:8:5)
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\route.js:119:3)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: misconfigured csrf
+    at csrf (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\csurf\index.js:71:19)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\app.js:89:5
+    at Layer.handle [as handle_request] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express\lib\router\index.js:280:10)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\serve-static\index.js:121:7)
+    at SendStream.emit (node:events:519:28)
+    at SendStream.error (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\send\index.js:270:17)
+error: Error: Parse error on line 31:
+...="badge {{#if stock > 0}}bg-success{{els
+-----------------------^
+Expecting 'CLOSE_RAW_BLOCK', 'CLOSE', 'CLOSE_UNESCAPED', 'OPEN_SEXPR', 'CLOSE_SEXPR', 'ID', 'EQUALS', 'OPEN_BLOCK_PARAMS', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', 'SEP', got 'INVALID'
+    at Parser.parseError (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:267:19)
+    at Parser.parse (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\parser.js:336:30)
+    at parseWithoutProcessing (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:46:33)
+    at HandlebarsEnvironment.parse (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\base.js:52:13)
+    at compileInput (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:508:19)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:517:18)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "formatDate"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:30:133)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "formatDate"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:30:133)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "formatDate"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:30:133)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "getStatusColor"
+    at model.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at model.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:15:118)
+    at prog (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:268:12)
+    at execIteration (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:51:19)
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:61:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:16:49)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+error: Error: Missing helper: "capitalize"
+    at model.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at model.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:17:110)
+    at prog (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:268:12)
+    at execIteration (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:51:19)
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:61:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:16:49)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\index.html'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\index.html'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\css\main.css'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\js\main.js'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\index.html'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\css\main.css'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\js\main.js'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\index.html'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\css\main.css'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\js\main.js'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\auth\login'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\css\main.css'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\js\main.js'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\auth\login'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\css\main.css'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\js\main.js'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\auth\login'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\css\main.css'
+error: Error: ENOENT: no such file or directory, stat 'C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\public\js\main.js'
+error: Error: Missing helper: "getPaymentStatusColor"
+    at model.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at model.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:11:175)
+    at Object.prog [as inverse] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:268:12)
+    at model.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\if.js:27:22)
+    at model.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:23:47)
+    at prog (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:268:12)
+    at execIteration (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:51:19)
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:61:13)
+error: Error: Missing helper: "getPaymentStatusColor"
+    at model.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at model.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:11:175)
+    at Object.prog [as inverse] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:268:12)
+    at model.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\if.js:27:22)
+    at model.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:23:47)
+    at prog (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:268:12)
+    at execIteration (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:51:19)
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:61:13)
+error: Error: Missing helper: "getPaymentStatusColor"
+    at model.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at model.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:11:175)
+    at Object.prog [as inverse] (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:268:12)
+    at model.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\if.js:27:22)
+    at model.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:23:47)
+    at prog (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:268:12)
+    at execIteration (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:51:19)
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\each.js:61:13)
+error: Error: Missing helper: "section"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:68:108)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "or"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:26:139)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "or"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:26:139)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: TypeError: options.inverse is not a function
+    at Object.orCond (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\helpers\handlebars.js:114:52)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:26:147)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "calculateSubtotal"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:65:124)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "calculateSubtotal"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:65:124)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "default"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:67:104)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "calculateTotal"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:69:118)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error: Missing helper: "section"
+    at Object.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\helpers\helper-missing.js:19:13)
+    at Object.wrapper (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\internal\wrapHelper.js:15:19)
+    at Object.eval [as main] (eval at createFunctionContext (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\javascript-compiler.js:262:23), <anonymous>:29:131)
+    at main (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:208:32)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\runtime.js:212:12)
+    at ret (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\handlebars\dist\cjs\handlebars\compiler\compiler.js:519:21)
+    at ExpressHandlebars._renderTemplate (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:324:16)
+    at ExpressHandlebars.<anonymous> (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:240:37)
+    at step (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (C:\Users\Admin\OneDrive\Desktop\Node\e_commerce_2\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+error: Error in updateOrderStatus: Cannot read properties of undefined (reading 'push') {"stack":"TypeError: Cannot read properties of undefined (reading 'push')\n    at exports.updateOrderStatus (C:\\Users\\Admin\\OneDrive\\Desktop\\Node\\e_commerce_2\\controllers\\adminController.js:86:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}

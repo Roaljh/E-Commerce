@@ -1,0 +1,108 @@
+{{> header}}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Payment for Order #{{order.invoiceNumber}}</h2>
+                </div>
+                <div class="card-body">
+                    {{#if error}}
+                        <div class="alert alert-danger">{{error}}</div>
+                    {{/if}}
+
+                    <div class="order-summary mb-4">
+                        <h4>Order Summary</h4>
+                        <p><strong>Total Amount:</strong> ₹{{formatCurrency order.total}}</p>
+                        <p><strong>Payment Method:</strong> {{paymentMethod}}</p>
+                    </div>
+
+                    {{#if (eq paymentMethod 'online')}}
+                        <div id="razorpay-button-container">
+                            <button id="rzp-button" class="btn btn-primary btn-lg w-100">
+                                Pay Now with Razorpay
+                            </button>
+                        </div>
+                    {{else if (eq paymentMethod 'cod')}}
+                        <div class="cod-confirmation">
+                            <h4>Cash on Delivery</h4>
+                            <p>You have selected Cash on Delivery. Your order will be processed and delivered.</p>
+                            <form action="/checkout/confirm-cod" method="POST">
+                                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                <input type="hidden" name="orderId" value="{{order._id}}">
+                                <button type="submit" class="btn btn-success btn-lg w-100">
+                                    Confirm Cash on Delivery Order
+                                </button>
+                            </form>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if (eq paymentMethod 'online')}}
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const rzpButton = document.getElementById('rzp-button');
+    
+    rzpButton.addEventListener('click', function() {
+        var options = {
+            key: '{{razorpayKey}}', 
+            amount: '{{order.total * 100}}', 
+            currency: 'INR',
+            name: 'E-Commerce Store',
+            description: 'Order Payment',
+            image: '/images/logo.png',
+            order_id: '{{razorpayOrderId}}', 
+            handler: function (response) {
+                // Send payment verification request to server
+                fetch('/checkout/verify-payment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                    },
+                    body: JSON.stringify({
+                        orderId: '{{order._id}}',
+                        razorpay_payment_id: response.razorpay_payment_id,
+                        razorpay_order_id: response.razorpay_order_id,
+                        razorpay_signature: response.razorpay_signature
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = '/checkout/success';
+                    } else {
+                        alert('Payment verification failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Payment verification error:', error);
+                    alert('An error occurred during payment verification');
+                });
+            },
+            prefill: {
+                name: '{{order.user.name}}',
+                email: '{{order.user.email}}'
+            },
+            notes: {
+                order_id: '{{order._id}}'
+            },
+            theme: {
+                color: '#3399cc'
+            }
+        };
+        
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+    });
+});
+</script>
+{{/if}}
+
+{{> footer}}

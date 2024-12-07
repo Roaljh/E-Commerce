@@ -1,0 +1,68 @@
+<div class="container mt-4">
+    {{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+    {{#if success}}
+    <div class="alert alert-success">{{success}}</div>
+    {{/if}}
+
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">Order Confirmed!</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <h5>Order Details</h5>
+                    <p><strong>Order ID:</strong> {{order._id}}</p>
+                    <p><strong>Order Date:</strong> {{formatDate order.orderDate}}</p>
+                    <p><strong>Status:</strong> 
+                        <span class="badge {{#if (eq order.status 'pending')}}bg-warning{{/if}}
+                                         {{#if (eq order.status 'processing')}}bg-info{{/if}}
+                                         {{#if (eq order.status 'shipped')}}bg-primary{{/if}}
+                                         {{#if (eq order.status 'delivered')}}bg-success{{/if}}
+                                         {{#if (eq order.status 'cancelled')}}bg-danger{{/if}}">
+                            {{order.status}}
+                        </span>
+                    </p>
+
+                    <h5 class="mt-4">Shipping Address</h5>
+                    <p>{{order.shippingAddress.address}}</p>
+                    <p>{{order.shippingAddress.city}}, {{order.shippingAddress.state}} {{order.shippingAddress.zipCode}}</p>
+
+                    <h5 class="mt-4">Payment Method</h5>
+                    <p>{{order.paymentMethod}}</p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Order Summary</h5>
+                        </div>
+                        <div class="card-body">
+                            {{#each order.items}}
+                            <div class="d-flex justify-content-between mb-2">
+                                <div>
+                                    <h6 class="mb-0">{{this.product.name}}</h6>
+                                    <small class="text-muted">Qty: {{this.quantity}}</small>
+                                </div>
+                                <span>${{multiply this.price this.quantity}}</span>
+                            </div>
+                            {{/each}}
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <strong>Total</strong>
+                                <strong>${{order.total}}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="/products" class="btn btn-primary">Continue Shopping</a>
+                <a href="/orders" class="btn btn-outline-primary">View All Orders</a>
+            </div>
+        </div>
+    </div>
+</div>

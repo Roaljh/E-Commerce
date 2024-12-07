@@ -1,0 +1,20 @@
+const express = require('express');
+const router = express.Router();
+const adminController = require('../controllers/adminController');
+const { isAdmin } = require('../middleware/auth');
+const csrf = require('csurf');
+const csrfProtection = csrf({ cookie: true });
+
+// Admin dashboard - Orders list
+router.get('/orders', isAdmin, csrfProtection, adminController.getOrders);
+
+// View single order
+router.get('/orders/:id', isAdmin, csrfProtection, adminController.getOrderDetails);
+
+// Update order status
+router.post('/orders/:id/status', isAdmin, csrfProtection, adminController.updateOrderStatus);
+
+// Add tracking number
+router.post('/orders/:id/tracking', isAdmin, csrfProtection, adminController.addTrackingNumber);
+
+module.exports = router;

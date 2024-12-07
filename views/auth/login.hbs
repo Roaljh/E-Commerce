@@ -1,0 +1,29 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Login</h3>
+            </div>
+            <div class="card-body">
+                {{#if error}}
+                <div class="alert alert-danger">{{error}}</div>
+                {{/if}}
+                <form action="/auth/login" method="POST">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                    <div class="mb-3">
+                        <label for="emailOrUsername" class="form-label">Email or Username</label>
+                        <input type="text" class="form-control" id="emailOrUsername" name="emailOrUsername" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <div class="text-center mt-3">
+                    <p>Don't have an account? <a href="/auth/register">Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

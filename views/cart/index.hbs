@@ -1,0 +1,173 @@
+{{#if error}}
+<div class="alert alert-danger">{{error}}</div>
+{{/if}}
+{{#if success}}
+<div class="alert alert-success">{{success}}</div>
+{{/if}}
+
+<div class="container mt-4">
+    {{#if cart.items.length}}
+    <div class="row">
+        <div class="col-md-8">
+            {{#each cart.items}}
+            <div class="row mb-4 align-items-center cart-item" data-product-id="{{this.product._id}}">
+                <div class="col-md-2">
+                    {{#if this.product.image}}
+                    <img src="{{this.product.image}}" alt="{{this.product.name}}" class="img-fluid rounded">
+                    {{else}}
+                    <div class="placeholder-image">No Image</div>
+                    {{/if}}
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-1">{{this.product.name}}</h5>
+                    <p class="text-muted mb-0">Price: ₹{{this.product.price}}</p>
+                </div>
+                <div class="col-md-3">
+                    <form class="update-quantity-form" data-product-id="{{this.product._id}}">
+                        <input type="hidden" name="_csrf" value="{{../csrfToken}}">
+                        <input type="hidden" name="productId" value="{{this.product._id}}">
+                        <div class="input-group">
+                            <button type="button" class="btn btn-outline-secondary decrease-qty">-</button>
+                            <input type="number" name="quantity" class="form-control text-center quantity-input" 
+                                   value="{{this.quantity}}" 
+                                   min="0" 
+                                   max="{{this.product.stock}}"
+                                   readonly>
+                            <button type="button" class="btn btn-outline-secondary increase-qty">+</button>
+                        </div>
+                        <small class="text-muted d-block mt-1">Stock: {{this.product.stock}}</small>
+                    </form>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="mb-0 item-total">₹{{multiply this.quantity this.product.price}}</h6>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-danger btn-sm remove-item" data-product-id="{{this.product._id}}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Order Summary</h5>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal:</span>
+                        <span class="cart-subtotal">₹{{calculateSubtotal cart.items}}</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Shipping:</span>
+                        <span>₹{{default cart.shippingCost 0}}</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <strong>Total:</strong>
+                        <strong class="cart-total">₹{{calculateTotal cart.items cart.shippingCost}}</strong>
+                    </div>
+                    <a href="/checkout" class="btn btn-primary w-100 mt-3">Proceed to Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="text-center py-5">
+        <h3>Your cart is empty</h3>
+        <p>Add some products to your cart</p>
+        <a href="/products" class="btn btn-primary">Continue Shopping</a>
+    </div>
+    {{/if}}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get CSRF token
+    const csrfToken = document.querySelector('input[name="_csrf"]').value;
+
+    // Handle quantity increase/decrease
+    document.querySelectorAll('.update-quantity-form').forEach(form => {
+        const productId = form.dataset.productId;
+        const quantityInput = form.querySelector('.quantity-input');
+        const decreaseBtn = form.querySelector('.decrease-qty');
+        const increaseBtn = form.querySelector('.increase-qty');
+        const maxStock = parseInt(quantityInput.getAttribute('max'));
+
+        decreaseBtn.addEventListener('click', () => {
+            const currentQty = parseInt(quantityInput.value);
+            if (currentQty > 0) {
+                updateQuantity(productId, currentQty - 1);
+            }
+        });
+
+        increaseBtn.addEventListener('click', () => {
+            const currentQty = parseInt(quantityInput.value);
+            if (currentQty < maxStock) {
+                updateQuantity(productId, currentQty + 1);
+            }
+        });
+    });
+
+    // Handle remove item
+    document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', () => {
+            const productId = button.dataset.productId;
+            updateQuantity(productId, 0);
+        });
+    });
+
+    function updateQuantity(productId, newQuantity) {
+        fetch('/cart/update', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'CSRF-Token': csrfToken
+            },
+            body: JSON.stringify({
+                productId: productId,
+                quantity: newQuantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Update the quantity input
+                const form = document.querySelector(`.update-quantity-form[data-product-id="${productId}"]`);
+                if (form) {
+                    const quantityInput = form.querySelector('.quantity-input');
+                    quantityInput.value = newQuantity;
+
+                    // Update item total
+                    const itemPrice = parseFloat(form.closest('.cart-item').querySelector('.text-muted').textContent.replace('Price: ₹', ''));
+                    const itemTotal = form.closest('.cart-item').querySelector('.item-total');
+                    itemTotal.textContent = `₹${(newQuantity * itemPrice).toFixed(2)}`;
+                }
+
+                // Update cart totals
+                document.querySelector('.cart-subtotal').textContent = `₹${data.cart.total.toFixed(2)}`;
+                document.querySelector('.cart-total').textContent = `₹${data.cart.total.toFixed(2)}`;
+
+                // Remove item if quantity is 0
+                if (newQuantity === 0) {
+                    const cartItem = document.querySelector(`.cart-item[data-product-id="${productId}"]`);
+                    cartItem.remove();
+
+                    // Refresh page if cart is empty
+                    if (document.querySelectorAll('.cart-item').length === 0) {
+                        location.reload();
+                    }
+                }
+            } else {
+                alert(data.message || 'Failed to update cart');
+                location.reload();
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to update cart');
+            location.reload();
+        });
+    }
+});
+</script>
